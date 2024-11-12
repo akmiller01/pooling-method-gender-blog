@@ -50,7 +50,10 @@ def preprocess_function(example):
             if label == "Principal gender equality objective":
                 labels[label2id["Significant gender equality objective"]] = 1.
 
-    example = tokenizer(example['text'], truncation=True)
+    if output_model_name == "unpooled-gender":
+        example = tokenizer(example['text'], truncation=True, padding='max_length')
+    else:
+        example = tokenizer(example['text'], truncation=True)
     example['labels'] = labels
     return example
 
