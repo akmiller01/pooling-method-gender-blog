@@ -102,13 +102,13 @@ training_args = TrainingArguments(
     per_device_eval_batch_size=24,
     num_train_epochs=10,
     weight_decay=0.01,
-    evaluation_strategy='epoch',
+    eval_strategy='epoch',
     save_strategy='epoch',
     logging_strategy='epoch',
     load_best_model_at_end=True,
     push_to_hub=True,
     save_total_limit=5,
-    report_to=None
+    report_to="none"
 )
 
 trainer = Trainer(
