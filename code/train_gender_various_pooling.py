@@ -97,10 +97,10 @@ model.class_weights = weights
 
 training_args = TrainingArguments(
     output_model_name,
-    learning_rate=1e-6,
+    learning_rate=2e-6,
     per_device_train_batch_size=24,
     per_device_eval_batch_size=24,
-    num_train_epochs=10,
+    num_train_epochs=5,
     weight_decay=0.01,
     eval_strategy='epoch',
     save_strategy='epoch',
