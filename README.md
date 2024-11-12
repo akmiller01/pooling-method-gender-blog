@@ -10,5 +10,5 @@ pip install -r requirements.txt
 
 ## Use
 ```
-python3 train_gender_various_pooling.py
+python3 code/train_gender_various_pooling.py
 ```
