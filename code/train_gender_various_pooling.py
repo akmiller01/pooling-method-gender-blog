@@ -23,6 +23,10 @@ output_model_name = "cls-pooled-gender"
 from bert_mean_pooled_model import BertForSequenceClassificationMeanPooled as ClassificationModel
 output_model_name = "mean-pooled-gender"
 
+# Max pooler
+from bert_max_pooled_model import BertForSequenceClassificationMaxPooled as ClassificationModel
+output_model_name = "max-pooled-gender"
+
 # Unpooled
 from bert_unpooled_model import BertForSequenceClassificationUnpooled as ClassificationModel
 output_model_name = "unpooled-gender"
