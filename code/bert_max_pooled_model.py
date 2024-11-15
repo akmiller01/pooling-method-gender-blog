@@ -22,7 +22,7 @@ class BertForSequenceClassificationMaxPooled(BertPreTrainedModel):
 
         # Initialize weights and apply final processing
         self.post_init()
-        
+
     def forward(
         self,
         input_ids: Optional[torch.Tensor] = None,
@@ -57,7 +57,7 @@ class BertForSequenceClassificationMaxPooled(BertPreTrainedModel):
         )
         last_hidden_state = outputs.last_hidden_state
 
-        max_pooled_output = last_hidden_state.max(dim=1)
+        max_pooled_output = last_hidden_state.max(dim=1).values
 
         max_pooled_output = self.dropout(max_pooled_output)
         logits = self.classifier(max_pooled_output)
